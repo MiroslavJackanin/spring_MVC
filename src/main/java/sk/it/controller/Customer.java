@@ -1,8 +1,13 @@
 package sk.it.controller;
 
+import sk.it.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
+
+    @CourseCode(value = "SS", message = "must start with SS")
+    private String courseCode;
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "only 5 chars/digits")
     private String postalCode;
@@ -48,5 +53,13 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
