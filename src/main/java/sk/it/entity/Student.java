@@ -1,4 +1,4 @@
-package sk.it.controller;
+package sk.it.entity;
 
 import java.util.LinkedHashMap;
 
